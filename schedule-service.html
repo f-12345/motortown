@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motor Town Inc | Schedule Service</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-badge">MT</span>
+      <div>
+        Motor Town Inc
+        <small>Inventory • Financing • Service</small>
+      </div>
+    </a>
+
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" type="button">Menu</button>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-link" href="inventory.html">Inventory</a>
+
+      <div class="nav-item has-dd">
+        <a class="nav-link" href="#" data-dd="true">Financing <span class="chev">▼</span></a>
+        <div class="dropdown">
+          <a href="financing.html">Finance</a>
+          <a href="get-prequalified.html">Get Pre-Qualified</a>
+          <a href="financing-faq.html">Financing FAQ</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="trade-sell.html">Trade/Sell Your Car</a>
+
+      <div class="nav-item has-dd">
+        <a class="nav-link" href="#" data-dd="true">Services <span class="chev">▼</span></a>
+        <div class="dropdown">
+          <a href="services.html">Service Overview</a>
+          <a href="schedule-service.html">Schedule Service</a>
+          <a href="general-services.html">General Services</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="tile">
+        <img class="tile-img" style="height:320px"
+             src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=2200&q=60"
+             alt="Schedule Service">
+        <div class="tile-body">
+          <div class="kicker">Schedule Service</div>
+          <h2 style="margin:8px 0 6px;">Request an appointment</h2>
+          <p>Submit the form and we will confirm the time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Service Request Form</h2>
+        <p style="color: var(--muted); margin-top:6px;">
+          For quick questions call 832-353-8614 or email info@motortowncars.com.
+        </p>
+
+        <form class="form" onsubmit="event.preventDefault(); alert('Demo: service requested!');">
+          <div class="split">
+            <div class="field">
+              <label>Name</label>
+              <input required />
+            </div>
+            <div class="field">
+              <label>Phone</label>
+              <input required />
+            </div>
+          </div>
+
+          <div class="split">
+            <div class="field">
+              <label>Vehicle</label>
+              <input placeholder="Year / Make / Model" required />
+            </div>
+            <div class="field">
+              <label>Preferred Date</label>
+              <input required placeholder="MM/DD/YYYY" />
+            </div>
+          </div>
+
+          <div class="split">
+            <div class="field">
+              <label>Service Type</label>
+              <select required>
+                <option>Oil Change</option>
+                <option>Brakes</option>
+                <option>Diagnostics</option>
+                <option>Tires</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Preferred Time</label>
+              <select required>
+                <option>Morning</option>
+                <option>Midday</option>
+                <option>Afternoon</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Notes (optional)</label>
+            <textarea placeholder="Describe the issue or request"></textarea>
+          </div>
+
+          <div class="btn-row">
+            <button class="btn primary" type="submit">Request Appointment</button>
+            <a class="btn" href="general-services.html">General Services</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>
+      <div style="font-weight:800;">Motor Town Inc</div>
+      <div style="color: rgba(255,255,255,.75);">info@motortowncars.com</div>
+      <div style="color: rgba(255,255,255,.75);">6880 Telephone Rd #D</div>
+      <div style="color: rgba(255,255,255,.75);">Houston, TX 77061</div>
+    </div>
+    <div style="margin-top:10px;">
+      <div style="font-weight:800;">832-353-8614</div>
+      <div style="color: rgba(255,255,255,.75);">© <span id="y"></span> Motor Town Inc</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

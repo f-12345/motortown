@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motor Town Inc | Get Pre-Qualified</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-badge">MT</span>
+      <div>
+        Motor Town Inc
+        <small>Inventory • Financing • Service</small>
+      </div>
+    </a>
+
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" type="button">Menu</button>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-link" href="inventory.html">Inventory</a>
+
+      <div class="nav-item has-dd">
+        <a class="nav-link" href="#" data-dd="true">Financing <span class="chev">▼</span></a>
+        <div class="dropdown">
+          <a href="financing.html">Finance</a>
+          <a href="get-prequalified.html">Get Pre-Qualified</a>
+          <a href="financing-faq.html">Financing FAQ</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="trade-sell.html">Trade/Sell Your Car</a>
+
+      <div class="nav-item has-dd">
+        <a class="nav-link" href="#" data-dd="true">Services <span class="chev">▼</span></a>
+        <div class="dropdown">
+          <a href="services.html">Service Overview</a>
+          <a href="schedule-service.html">Schedule Service</a>
+          <a href="general-services.html">General Services</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="tile">
+        <img class="tile-img" style="height:320px"
+             src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60"
+             alt="Pre-Qualification">
+        <div class="tile-body">
+          <div class="kicker">Get Pre-Qualified</div>
+          <h2 style="margin:8px 0 6px;">Start the financing process</h2>
+          <p>No obligation. We follow up with next steps after you submit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Pre-Qualification Form</h2>
+        <p style="color: var(--muted); margin-top:6px;">
+          Demo form for now. Connect to your lender or backend later.
+          For questions call 832-353-8614 or email info@motortowncars.com.
+        </p>
+
+        <form class="form" onsubmit="event.preventDefault(); alert('Demo submitted');">
+          <div class="split">
+            <div class="field">
+              <label>Full Name</label>
+              <input required />
+            </div>
+            <div class="field">
+              <label>Phone</label>
+              <input required />
+            </div>
+          </div>
+
+          <div class="split">
+            <div class="field">
+              <label>Email</label>
+              <input required />
+            </div>
+            <div class="field">
+              <label>Monthly Income</label>
+              <input required />
+            </div>
+          </div>
+
+          <div class="split">
+            <div class="field">
+              <label>Credit Range</label>
+              <select required>
+                <option>Excellent (720+)</option>
+                <option>Good (680–719)</option>
+                <option>Fair (620–679)</option>
+                <option>Building</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Down Payment (optional)</label>
+              <input />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Notes (optional)</label>
+            <textarea placeholder="Any details you want us to know"></textarea>
+          </div>
+
+          <div class="btn-row">
+            <button class="btn primary" type="submit">Submit</button>
+            <a class="btn" href="inventory.html">Browse Inventory</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>
+      <div style="font-weight:800;">Motor Town Inc</div>
+      <div style="color: rgba(255,255,255,.75);">info@motortowncars.com</div>
+      <div style="color: rgba(255,255,255,.75);">6880 Telephone Rd #D</div>
+      <div style="color: rgba(255,255,255,.75);">Houston, TX 77061</div>
+    </div>
+    <div style="margin-top:10px;">
+      <div style="font-weight:800;">832-353-8614</div>
+      <div style="color: rgba(255,255,255,.75);">© <span id="y"></span> Motor Town Inc</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

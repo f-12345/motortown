@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motor Town Inc | General Services</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-badge">MT</span>
+      <div>
+        Motor Town Inc
+        <small>Inventory • Financing • Service</small>
+      </div>
+    </a>
+
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" type="button">Menu</button>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-link" href="inventory.html">Inventory</a>
+
+      <div class="nav-item has-dd">
+        <a class="nav-link" href="#" data-dd="true">Financing <span class="chev">▼</span></a>
+        <div class="dropdown">
+          <a href="financing.html">Finance</a>
+          <a href="get-prequalified.html">Get Pre-Qualified</a>
+          <a href="financing-faq.html">Financing FAQ</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="trade-sell.html">Trade/Sell Your Car</a>
+
+      <div class="nav-item has-dd">
+        <a class="nav-link" href="#" data-dd="true">Services <span class="chev">▼</span></a>
+        <div class="dropdown">
+          <a href="services.html">Service Overview</a>
+          <a href="schedule-service.html">Schedule Service</a>
+          <a href="general-services.html">General Services</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="card">
+        <div class="kicker">General Services</div>
+        <h2 style="margin:10px 0 6px;">What we offer</h2>
+        <p style="color: var(--muted);">
+          Need to schedule? Use the service request form or contact us.
+        </p>
+        <div class="btn-row">
+          <a class="btn primary" href="schedule-service.html">Schedule Service</a>
+          <a class="btn" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid3">
+      <div class="card">
+        <h3>Oil Changes</h3>
+        <p>Full service oil change with quality filters.</p>
+      </div>
+      <div class="card">
+        <h3>Brake Inspection and Repair</h3>
+        <p>Pads, rotors, fluid, and safety checks.</p>
+      </div>
+      <div class="card">
+        <h3>Diagnostics</h3>
+        <p>Check engine light and system scans.</p>
+      </div>
+      <div class="card">
+        <h3>Tires</h3>
+        <p>Rotation, replacement, and balancing.</p>
+      </div>
+      <div class="card">
+        <h3>Battery and Electrical</h3>
+        <p>Testing, replacement, and charging systems.</p>
+      </div>
+      <div class="card">
+        <h3>General Repairs</h3>
+        <p>Tell us what you need and we will confirm options.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <div class="kicker">Contact</div>
+        <h2 style="margin:10px 0 8px;">Service contact information</h2>
+        <p style="color: var(--muted); margin:0;">
+          Motor Town Inc • 6880 Telephone Rd #D • Houston, TX 77061
+        </p>
+        <p style="color: var(--muted); margin:6px 0 0;">
+          info@motortowncars.com • 832-353-8614
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>
+      <div style="font-weight:800;">Motor Town Inc</div>
+      <div style="color: rgba(255,255,255,.75);">info@motortowncars.com</div>
+      <div style="color: rgba(255,255,255,.75);">6880 Telephone Rd #D</div>
+      <div style="color: rgba(255,255,255,.75);">Houston, TX 77061</div>
+    </div>
+    <div style="margin-top:10px;">
+      <div style="font-weight:800;">832-353-8614</div>
+      <div style="color: rgba(255,255,255,.75);">© <span id="y"></span> Motor Town Inc</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

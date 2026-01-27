@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motor Town Inc | Trade/Sell Your Car</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-badge">MT</span>
+      <div>
+        Motor Town Inc
+        <small>Inventory • Financing • Service</small>
+      </div>
+    </a>
+
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" type="button">Menu</button>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-link" href="inventory.html">Inventory</a>
+
+      <div class="nav-item has-dd">
+        <a class="nav-link" href="#" data-dd="true">Financing <span class="chev">▼</span></a>
+        <div class="dropdown">
+          <a href="financing.html">Finance</a>
+          <a href="get-prequalified.html">Get Pre-Qualified</a>
+          <a href="financing-faq.html">Financing FAQ</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="trade-sell.html">Trade/Sell Your Car</a>
+
+      <div class="nav-item has-dd">
+        <a class="nav-link" href="#" data-dd="true">Services <span class="chev">▼</span></a>
+        <div class="dropdown">
+          <a href="services.html">Service Overview</a>
+          <a href="schedule-service.html">Schedule Service</a>
+          <a href="general-services.html">General Services</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="tile">
+        <img class="tile-img" style="height:320px"
+             src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2200&q=60"
+             alt="Trade sell">
+        <div class="tile-body">
+          <div class="kicker">Trade/Sell Your Car</div>
+          <h2 style="margin:8px 0 6px;">Get an offer</h2>
+          <p>Fill out the form and we will contact you about your vehicle.</p>
+          <div class="btn-row">
+            <a class="btn primary" href="inventory.html">Browse Inventory</a>
+            <a class="btn" href="contact.html">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Trade/Sell Form</h2>
+        <p style="color: var(--muted); margin-top:6px;">
+          Prefer to talk directly? Call 832-353-8614 or email info@motortowncars.com.
+        </p>
+
+        <form class="form" onsubmit="event.preventDefault(); alert('Demo: request submitted!');">
+          <div class="split">
+            <div class="field">
+              <label>Full Name</label>
+              <input required />
+            </div>
+            <div class="field">
+              <label>Phone</label>
+              <input required />
+            </div>
+          </div>
+
+          <div class="split">
+            <div class="field">
+              <label>Year</label>
+              <input required />
+            </div>
+            <div class="field">
+              <label>Make</label>
+              <input required />
+            </div>
+          </div>
+
+          <div class="split">
+            <div class="field">
+              <label>Model</label>
+              <input required />
+            </div>
+            <div class="field">
+              <label>Mileage</label>
+              <input required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Notes (optional)</label>
+            <textarea placeholder="Condition, repairs, accidents, etc."></textarea>
+          </div>
+
+          <div class="btn-row">
+            <button class="btn primary" type="submit">Submit</button>
+            <a class="btn" href="inventory.html">Browse Inventory</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>
+      <div style="font-weight:800;">Motor Town Inc</div>
+      <div style="color: rgba(255,255,255,.75);">info@motortowncars.com</div>
+      <div style="color: rgba(255,255,255,.75);">6880 Telephone Rd #D</div>
+      <div style="color: rgba(255,255,255,.75);">Houston, TX 77061</div>
+    </div>
+    <div style="margin-top:10px;">
+      <div style="font-weight:800;">832-353-8614</div>
+      <div style="color: rgba(255,255,255,.75);">© <span id="y"></span> Motor Town Inc</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

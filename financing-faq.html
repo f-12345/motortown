@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motor Town Inc | Financing FAQ</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-badge">MT</span>
+      <div>
+        Motor Town Inc
+        <small>Inventory • Financing • Service</small>
+      </div>
+    </a>
+
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" type="button">Menu</button>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-link" href="inventory.html">Inventory</a>
+
+      <div class="nav-item has-dd">
+        <a class="nav-link" href="#" data-dd="true">Financing <span class="chev">▼</span></a>
+        <div class="dropdown">
+          <a href="financing.html">Finance</a>
+          <a href="get-prequalified.html">Get Pre-Qualified</a>
+          <a href="financing-faq.html">Financing FAQ</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="trade-sell.html">Trade/Sell Your Car</a>
+
+      <div class="nav-item has-dd">
+        <a class="nav-link" href="#" data-dd="true">Services <span class="chev">▼</span></a>
+        <div class="dropdown">
+          <a href="services.html">Service Overview</a>
+          <a href="schedule-service.html">Schedule Service</a>
+          <a href="general-services.html">General Services</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="card">
+        <div class="kicker">Financing FAQ</div>
+        <h2 style="margin:10px 0 6px;">Common questions</h2>
+        <p style="color: var(--muted);">
+          Need help right away? Call 832-353-8614 or email info@motortowncars.com.
+        </p>
+        <div class="btn-row">
+          <a class="btn primary" href="get-prequalified.html">Get Pre-Qualified</a>
+          <a class="btn" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid3">
+      <div class="card">
+        <h3>Does pre-qualification affect my credit?</h3>
+        <p>Most pre-qualification checks use a soft credit pull.</p>
+      </div>
+      <div class="card">
+        <h3>What documents do I need?</h3>
+        <p>Valid ID, proof of income, and insurance. Trade-in info if applicable.</p>
+      </div>
+      <div class="card">
+        <h3>Can I get approved with bad credit?</h3>
+        <p>Yes. We work with multiple lenders and options.</p>
+      </div>
+      <div class="card">
+        <h3>How long does approval take?</h3>
+        <p>Often same day, depending on the lender and information provided.</p>
+      </div>
+      <div class="card">
+        <h3>Do you accept trade-ins?</h3>
+        <p>Yes. Trade value can be applied toward your deal.</p>
+      </div>
+      <div class="card">
+        <h3>Is there any obligation?</h3>
+        <p>No. Pre-qualification is optional and does not require a purchase.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>
+      <div style="font-weight:800;">Motor Town Inc</div>
+      <div style="color: rgba(255,255,255,.75);">info@motortowncars.com</div>
+      <div style="color: rgba(255,255,255,.75);">6880 Telephone Rd #D</div>
+      <div style="color: rgba(255,255,255,.75);">Houston, TX 77061</div>
+    </div>
+    <div style="margin-top:10px;">
+      <div style="font-weight:800;">832-353-8614</div>
+      <div style="color: rgba(255,255,255,.75);">© <span id="y"></span> Motor Town Inc</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
