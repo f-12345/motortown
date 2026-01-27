@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motor Town Inc | Contact</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav-wrap">
+
+    <a class="brand" href="index.html">
+      <span class="brand-badge">MT</span>
+      <div>
+        Motor Town Inc
+        <small>Inventory • Financing • Service</small>
+      </div>
+    </a>
+
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" type="button">Menu</button>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-link" href="inventory.html">Inventory</a>
+
+      <div class="nav-item has-dd">
+        <a class="nav-link" href="#" data-dd="true">Financing <span class="chev">▼</span></a>
+        <div class="dropdown">
+          <a href="financing.html">Finance</a>
+          <a href="get-prequalified.html">Get Pre-Qualified</a>
+          <a href="financing-faq.html">Financing FAQ</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="trade-sell.html">Trade/Sell Your Car</a>
+
+      <div class="nav-item has-dd">
+        <a class="nav-link" href="#" data-dd="true">Services <span class="chev">▼</span></a>
+        <div class="dropdown">
+          <a href="services.html">Service Overview</a>
+          <a href="schedule-service.html">Schedule Service</a>
+          <a href="general-services.html">General Services</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="contact.html">Contact Us</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="tile">
+        <img class="tile-img" style="height:320px"
+             src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=2200&q=60"
+             alt="Contact">
+        <div class="tile-body">
+          <div class="kicker">Contact</div>
+          <h2 style="margin:8px 0 6px;">Get in touch</h2>
+          <p>
+            Call or email us, or send a message using the form below.
+          </p>
+          <div class="btn-row">
+            <a class="btn primary" href="inventory.html">Browse Inventory</a>
+            <a class="btn" href="get-prequalified.html">Get Pre-Qualified</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid3">
+        <div class="card">
+          <h3 style="margin:0 0 6px;">Email</h3>
+          <p style="margin:0;">info@motortowncars.com</p>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 6px;">Phone</h3>
+          <p style="margin:0;">832-353-8614</p>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 6px;">Address</h3>
+          <p style="margin:0;">
+            6880 Telephone Rd #D<br>
+            Houston, TX 77061
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card" style="display:grid; grid-template-columns: 1.05fr .95fr; gap: 14px; align-items:start;">
+
+        <div>
+          <div class="kicker">Message</div>
+          <h2 style="margin:10px 0 8px;">Send a message</h2>
+          <p style="color: var(--muted); margin-bottom:12px;">
+            Demo form for now. You can connect it to email or a backend later.
+          </p>
+
+          <form class="form" onsubmit="event.preventDefault(); alert('Demo: message sent!');">
+            <div class="split">
+              <div class="field">
+                <label>Name</label>
+                <input required placeholder="Full name" />
+              </div>
+              <div class="field">
+                <label>Phone</label>
+                <input required placeholder="832-353-8614" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Email</label>
+              <input required placeholder="info@motortowncars.com" />
+            </div>
+
+            <div class="field">
+              <label>Message</label>
+              <textarea placeholder="How can we help?"></textarea>
+            </div>
+
+            <div class="btn-row">
+              <button class="btn primary" type="submit">Send Message</button>
+              <a class="btn" href="inventory.html">Browse Inventory</a>
+            </div>
+          </form>
+        </div>
+
+        <div>
+          <div class="card" style="padding:12px;">
+            <div class="kicker" style="margin-bottom:8px;">Map</div>
+            <div style="border-radius: 14px; overflow:hidden; border:1px solid rgba(255,255,255,.12);">
+              <iframe
+                title="Map"
+                src="https://www.google.com/maps?q=6880%20Telephone%20Rd%20%23D%20Houston%20TX%2077061&output=embed"
+                width="100%"
+                height="300"
+                style="border:0; display:block;"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <div style="color: var(--muted); font-size: 13px; margin-top:8px;">
+              6880 Telephone Rd #D • Houston, TX 77061
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>
+      <div style="font-weight:800;">Motor Town Inc</div>
+      <div style="color: rgba(255,255,255,.75);">info@motortowncars.com</div>
+      <div style="color: rgba(255,255,255,.75);">6880 Telephone Rd #D</div>
+      <div style="color: rgba(255,255,255,.75);">Houston, TX 77061</div>
+    </div>
+
+    <div style="margin-top:10px;">
+      <div style="font-weight:800;">832-353-8614</div>
+      <div style="color: rgba(255,255,255,.75);">© <span id="y"></span> Motor Town Inc</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
