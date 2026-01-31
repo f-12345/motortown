@@ -3,22 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Motor Town Inc | Get Pre-Qualified</title>
+  <title>Motor Town Inc | Home</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
 <header class="topbar">
   <div class="container nav-wrap">
+
     <a class="brand" href="index.html">
-      <span class="brand-badge">MT</span>
+      <img src="assets/images/logo.png" alt="Motor Town Inc" class="brand-logo">
       <div>
         Motor Town Inc
         <small>Inventory • Financing • Service</small>
       </div>
     </a>
 
-    <button class="hamburger" aria-label="Open menu" aria-expanded="false" type="button">Menu</button>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" type="button">
+      Menu
+    </button>
 
     <nav class="nav" aria-label="Primary">
       <a class="nav-link" href="inventory.html">Inventory</a>
@@ -29,9 +32,12 @@
           <a href="financing.html">Finance</a>
           <a href="get-prequalified.html">Get Pre-Qualified</a>
           <a href="financing-faq.html">Financing FAQ</a>
-          <a href="https://motortowncars.startyourcreditapproval.com/" target="_blank" rel="noopener">Lenders</a>
         </div>
       </div>
+
+      <nav class="nav">
+        <a class="nav-link" href="https://motortowncars.startyourcreditapproval.com/">Lenders</a>
+      </nav>
 
       <a class="nav-link" href="trade-sell.html">Trade/Sell Your Car</a>
 
@@ -46,437 +52,341 @@
 
       <a class="nav-link" href="contact.html">Contact Us</a>
     </nav>
+
   </div>
 </header>
 
 <main>
+
+  <!-- HERO -->
   <section class="hero">
-    <div class="container">
-      <div class="tile">
-        <img class="tile-img" style="height:320px"
-             src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60"
-             alt="Pre-Qualification">
-        <div class="tile-body">
-          <div class="kicker">Get Pre-Qualified</div>
-          <h2 style="margin:8px 0 6px;">Start the financing process</h2>
-          <p>No obligation. After you submit, our team will review your information and follow up with next steps.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <div class="container hero-banner">
+      <div class="hero-inner">
 
-  <section class="section">
-    <div class="container">
-      <div class="card">
-        <h2>Pre-Qualification Form</h2>
-        <p style="color: var(--muted); margin-top:6px;">
-          Complete the secure pre-qualification form below to begin the financing process.
-          If you have any questions, please call 832-353-8614 or email info@motortowncars.com.
-        </p>
-
-        <!-- IMPORTANT:
-             Replace YOUR_FORMSPREE_ENDPOINT with your Formspree URL, like:
-             https://formspree.io/f/abcdwxyz
-        -->
-        <form class="form" id="creditApp" action="YOUR_FORMSPREE_ENDPOINT" method="POST">
-          <!-- Email Subject -->
-          <input type="hidden" name="_subject" value="New Pre-Qualification Application - Motor Town Inc" />
-
-          <h3 style="margin-top:0;">Auto Credit Application</h3>
-
-          <!-- DEALER INFO -->
-          <div class="card" style="margin: 14px 0;">
-            <h4 style="margin:0 0 10px;">Dealer Information</h4>
-
-            <div class="split">
-              <div class="field">
-                <label for="dealerName">Dealer Name</label>
-                <input id="dealerName" name="Dealer Name" value="Motor Town Inc" readonly />
-              </div>
-              <div class="field">
-                <label for="dealerPhone">Phone</label>
-                <input id="dealerPhone" name="Dealer Phone" value="832-353-8614" readonly />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="dealerAddress">Dealer Address</label>
-                <input id="dealerAddress" name="Dealer Address" value="6880 Telephone Rd #D, Houston, TX 77061" readonly />
-              </div>
-              <div class="field">
-                <label for="dealerEmail">Email</label>
-                <input id="dealerEmail" name="Dealer Email" value="info@motortowncars.com" readonly />
-              </div>
-            </div>
-          </div>
-
-          <!-- APPLICANT -->
-          <div class="card" style="margin: 14px 0;">
-            <h4 style="margin:0 0 10px;">Applicant Information</h4>
-
-            <div class="split">
-              <div class="field">
-                <label for="appFullName">Full Name</label>
-                <input id="appFullName" name="Applicant Full Name" required autocomplete="name" />
-              </div>
-              <div class="field">
-                <label for="appDob">Date of Birth</label>
-                <input id="appDob" name="Applicant Date of Birth" type="date" required autocomplete="bday" />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="appSsn">Social Security Number (optional)</label>
-                <input id="appSsn" name="Applicant SSN (optional)" inputmode="numeric" placeholder="XXX-XX-XXXX" autocomplete="off" />
-                <div style="color: var(--muted); font-size: 12px; margin-top: 6px;">
-                  For security, you may leave this blank and provide it by phone if preferred.
-                </div>
-              </div>
-              <div class="field">
-                <label for="appDl">Driver License #</label>
-                <input id="appDl" name="Applicant Driver License Number" autocomplete="off" />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="appDlState">DL State</label>
-                <input id="appDlState" name="Applicant DL State" maxlength="2" placeholder="TX" />
-              </div>
-              <div class="field">
-                <label for="appPhone">Phone</label>
-                <input id="appPhone" name="Applicant Phone" required inputmode="tel" autocomplete="tel" />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="appEmail">Email</label>
-                <input id="appEmail" name="Applicant Email" type="email" required autocomplete="email" />
-              </div>
-              <div class="field">
-                <label for="appAddress">Current Address</label>
-                <input id="appAddress" name="Applicant Address" required autocomplete="street-address" />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="appCity">City</label>
-                <input id="appCity" name="Applicant City" required autocomplete="address-level2" />
-              </div>
-              <div class="field">
-                <label for="appState">State</label>
-                <input id="appState" name="Applicant State" required maxlength="2" placeholder="TX" autocomplete="address-level1" />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="appZip">Zip</label>
-                <input id="appZip" name="Applicant Zip" required inputmode="numeric" autocomplete="postal-code" />
-              </div>
-              <div class="field">
-                <label for="appTimeAtAddress">Time at Address</label>
-                <input id="appTimeAtAddress" name="Applicant Time at Address" placeholder="e.g., 2 years" />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="housing">Housing</label>
-                <select id="housing" name="Housing" required>
-                  <option value="">Select</option>
-                  <option>Rent</option>
-                  <option>Own</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="housingPay">Monthly Housing Payment</label>
-                <input id="housingPay" name="Monthly Housing Payment" inputmode="decimal" placeholder="$" />
-              </div>
-            </div>
-          </div>
-
-          <!-- EMPLOYMENT -->
-          <div class="card" style="margin: 14px 0;">
-            <h4 style="margin:0 0 10px;">Employment Information</h4>
-
-            <div class="split">
-              <div class="field">
-                <label for="empName">Employer Name</label>
-                <input id="empName" name="Employer Name" />
-              </div>
-              <div class="field">
-                <label for="jobTitle">Job Title</label>
-                <input id="jobTitle" name="Job Title" />
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="empAddress">Employer Address</label>
-              <input id="empAddress" name="Employer Address" />
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="timeEmployed">Time Employed</label>
-                <input id="timeEmployed" name="Time Employed" placeholder="e.g., 3 years" />
-              </div>
-              <div class="field">
-                <label for="monthlyIncome">Monthly Income (Gross)</label>
-                <input id="monthlyIncome" name="Monthly Income (Gross)" inputmode="decimal" placeholder="$" />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="workPhone">Work Phone</label>
-                <input id="workPhone" name="Work Phone" inputmode="tel" />
-              </div>
-              <div class="field">
-                <label for="otherIncome">Other Income</label>
-                <input id="otherIncome" name="Other Income" inputmode="decimal" placeholder="$" />
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="otherIncomeSource">Other Income Source</label>
-              <input id="otherIncomeSource" name="Other Income Source" placeholder="e.g., Self-employed, SSI, etc." />
-            </div>
-          </div>
-
-          <!-- CO-APPLICANT -->
-          <div class="card" style="margin: 14px 0;">
-            <h4 style="margin:0 0 10px;">Co-Applicant Information (if applicable)</h4>
-
-            <div class="split">
-              <div class="field">
-                <label for="coFullName">Full Name</label>
-                <input id="coFullName" name="Co-Applicant Full Name" />
-              </div>
-              <div class="field">
-                <label for="coDob">Date of Birth</label>
-                <input id="coDob" name="Co-Applicant Date of Birth" type="date" />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="coSsn">SSN (optional)</label>
-                <input id="coSsn" name="Co-Applicant SSN (optional)" inputmode="numeric" placeholder="XXX-XX-XXXX" autocomplete="off" />
-              </div>
-              <div class="field">
-                <label for="coPhone">Phone</label>
-                <input id="coPhone" name="Co-Applicant Phone" inputmode="tel" />
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="coAddress">Address</label>
-              <input id="coAddress" name="Co-Applicant Address" />
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="coEmployer">Employer</label>
-                <input id="coEmployer" name="Co-Applicant Employer" />
-              </div>
-              <div class="field">
-                <label for="coIncome">Monthly Income</label>
-                <input id="coIncome" name="Co-Applicant Monthly Income" inputmode="decimal" placeholder="$" />
-              </div>
-            </div>
-          </div>
-
-          <!-- VEHICLE -->
-          <div class="card" style="margin: 14px 0;">
-            <h4 style="margin:0 0 10px;">Vehicle Information</h4>
-
-            <div class="split">
-              <div class="field">
-                <label for="vehYear">Year</label>
-                <input id="vehYear" name="Vehicle Year" inputmode="numeric" placeholder="YYYY" />
-              </div>
-              <div class="field">
-                <label for="vehMake">Make</label>
-                <input id="vehMake" name="Vehicle Make" />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="vehModel">Model</label>
-                <input id="vehModel" name="Vehicle Model" />
-              </div>
-              <div class="field">
-                <label for="vehVin">VIN</label>
-                <input id="vehVin" name="Vehicle VIN" />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="vehMileage">Mileage</label>
-                <input id="vehMileage" name="Vehicle Mileage" inputmode="numeric" />
-              </div>
-              <div class="field">
-                <label for="vehPrice">Selling Price</label>
-                <input id="vehPrice" name="Vehicle Selling Price" inputmode="decimal" placeholder="$" />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="vehDown">Down Payment</label>
-                <input id="vehDown" name="Down Payment" inputmode="decimal" placeholder="$" />
-              </div>
-              <div class="field">
-                <label for="vehFinance">Amount to Finance</label>
-                <input id="vehFinance" name="Amount to Finance" inputmode="decimal" placeholder="$" />
-              </div>
-            </div>
-          </div>
-
-          <!-- TRADE-IN -->
-          <div class="card" style="margin: 14px 0;">
-            <h4 style="margin:0 0 10px;">Trade-In Information (if applicable)</h4>
-
-            <div class="split">
-              <div class="field">
-                <label for="tradeYear">Year</label>
-                <input id="tradeYear" name="Trade-In Year" inputmode="numeric" placeholder="YYYY" />
-              </div>
-              <div class="field">
-                <label for="tradeMake">Make</label>
-                <input id="tradeMake" name="Trade-In Make" />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="tradeModel">Model</label>
-                <input id="tradeModel" name="Trade-In Model" />
-              </div>
-              <div class="field">
-                <label for="tradeVin">VIN</label>
-                <input id="tradeVin" name="Trade-In VIN" />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="tradeMileage">Mileage</label>
-                <input id="tradeMileage" name="Trade-In Mileage" inputmode="numeric" />
-              </div>
-              <div class="field">
-                <label for="tradeValue">Estimated Value</label>
-                <input id="tradeValue" name="Trade-In Estimated Value" inputmode="decimal" placeholder="$" />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="tradeLoanBal">Loan Balance</label>
-                <input id="tradeLoanBal" name="Trade-In Loan Balance" inputmode="decimal" placeholder="$" />
-              </div>
-              <div class="field">
-                <label for="tradeNotes">Notes (optional)</label>
-                <input id="tradeNotes" name="Trade-In Notes (optional)" placeholder="Any trade details" />
-              </div>
-            </div>
-          </div>
-
-          <!-- REFERENCES -->
-          <div class="card" style="margin: 14px 0;">
-            <h4 style="margin:0 0 10px;">References</h4>
-
-            <div class="split">
-              <div class="field">
-                <label for="ref1Name">Reference 1 Name</label>
-                <input id="ref1Name" name="Reference 1 Name" />
-              </div>
-              <div class="field">
-                <label for="ref1Phone">Reference 1 Phone</label>
-                <input id="ref1Phone" name="Reference 1 Phone" inputmode="tel" />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="ref2Name">Reference 2 Name</label>
-                <input id="ref2Name" name="Reference 2 Name" />
-              </div>
-              <div class="field">
-                <label for="ref2Phone">Reference 2 Phone</label>
-                <input id="ref2Phone" name="Reference 2 Phone" inputmode="tel" />
-              </div>
-            </div>
-          </div>
-
-          <!-- AUTHORIZATION -->
-          <div class="card" style="margin: 14px 0;">
-            <h4 style="margin:0 0 10px;">Authorization</h4>
-            <p style="color: var(--muted); margin-top:0;">
-              I authorize the Dealer and its lending partners to obtain my consumer credit report and verify employment,
-              income, residency, and other information provided. I certify that all information is true and correct.
-            </p>
-
-            <div class="field">
-              <label>
-                <input type="checkbox" id="consent" name="Authorization Consent" required />
-                I agree and authorize credit and information verification.
-              </label>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="appSignature">Applicant Signature (type full name)</label>
-                <input id="appSignature" name="Applicant Signature" required />
-              </div>
-              <div class="field">
-                <label for="appSigDate">Date</label>
-                <input id="appSigDate" name="Applicant Signature Date" type="date" required />
-              </div>
-            </div>
-
-            <div class="split">
-              <div class="field">
-                <label for="coSignature">Co-Applicant Signature (type full name)</label>
-                <input id="coSignature" name="Co-Applicant Signature" />
-              </div>
-              <div class="field">
-                <label for="coSigDate">Date</label>
-                <input id="coSigDate" name="Co-Applicant Signature Date" type="date" />
-              </div>
-            </div>
-          </div>
+        <div>
+          <div class="kicker">Houston • Used cars you can trust</div>
+          <h1 class="h-title">Clean inventory, fast approvals, and an easy process.</h1>
+          <p class="h-sub">
+            Browse our inventory, get pre-qualified, or schedule service.
+            Built to feel like a real dealership website.
+          </p>
 
           <div class="btn-row">
-            <button class="btn primary" type="submit">Submit Application</button>
-            <button class="btn" type="reset">Clear</button>
-            <a class="btn" href="inventory.html">Browse Inventory</a>
+            <a class="btn primary" href="inventory.html">Browse Inventory</a>
+            <a class="btn" href="get-prequalified.html">Get Pre-Qualified</a>
+            <a class="btn" href="trade-sell.html">Trade/Sell</a>
           </div>
-        </form>
+        </div>
 
-        <div class="card" style="margin-top:14px;">
-          <div style="font-weight:800; margin-bottom:6px;">Prefer a secure lender application?</div>
-          <div style="color: var(--muted); font-size:14px;">
-            You can also complete your credit approval through our lender portal.
+        <div class="card">
+          <div class="kicker">Quick info</div>
+
+          <h2 style="margin:10px 0 6px;">Phone</h2>
+          <div style="color: rgba(255,255,255,.78);">832-353-8614</div>
+
+          <h2 style="margin:14px 0 6px;">Email</h2>
+          <div style="color: rgba(255,255,255,.78);">info@motortowncars.com</div>
+
+          <h2 style="margin:14px 0 6px;">Address</h2>
+          <div style="color: rgba(255,255,255,.78);">
+            6880 Telephone Rd #D<br>
+            Houston, TX 77061
           </div>
-          <div class="btn-row" style="margin-top:10px;">
-            <a class="btn primary" href="https://motortowncars.startyourcreditapproval.com/" target="_blank" rel="noopener">
-              Complete Secure Credit Application
-            </a>
+
+          <div class="btn-row" style="margin-top:14px;">
+            <a class="btn primary" href="contact.html">Get Directions</a>
+            <a class="btn" href="schedule-service.html">Schedule Service</a>
           </div>
         </div>
 
       </div>
     </div>
   </section>
+
+  <!-- WHAT WE OFFER -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <div class="kicker">What we offer</div>
+          <h2>Everything you need in one place</h2>
+        </div>
+        <p>Inventory, financing, and service with a clean experience.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="tile">
+          <img class="tile-img"
+               src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1600&q=60"
+               alt="Inventory">
+          <div class="tile-body">
+            <h3>Inventory</h3>
+            <p>Browse featured vehicles and availability.</p>
+            <a class="btn primary" href="inventory.html">View Inventory</a>
+          </div>
+        </div>
+
+        <div class="tile">
+          <img class="tile-img"
+               src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=60"
+               alt="Financing">
+          <div class="tile-body">
+            <h3>Financing</h3>
+            <p>Start a quick pre-qualification with no pressure.</p>
+            <a class="btn primary" href="get-prequalified.html">Start Pre-Qual</a>
+          </div>
+        </div>
+
+        <div class="tile">
+          <img class="tile-img"
+               src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1600&q=60"
+               alt="Service">
+          <div class="tile-body">
+            <h3>Service</h3>
+            <p>Maintenance, diagnostics, and general repairs.</p>
+            <a class="btn primary" href="services.html">Explore Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED INVENTORY PREVIEW -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <div class="kicker">Featured</div>
+          <h2>Popular picks</h2>
+        </div>
+        <p>Browse our current selection of quality pre-owned vehicles available on our lot.</p>
+      </div>
+
+      <div class="inv-grid">
+        <div class="inv-card">
+          <img class="inv-img"
+               src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1800&q=60"
+               alt="Vehicle">
+          <div class="inv-body">
+            <h3 class="inv-title">2020 Toyota Camry SE</h3>
+            <div class="inv-meta">41,220 miles • Automatic</div>
+            <div class="inv-price">
+              <div style="font-weight:800; font-size:18px;">$22,990</div>
+              <div class="badge">One Owner</div>
+            </div>
+            <div class="btn-row" style="margin-top:6px;">
+              <a class="btn primary" href="contact.html">Check Availability</a>
+              <a class="btn" href="get-prequalified.html">Get Pre-Qualified</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="inv-card">
+          <img class="inv-img"
+               src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=60"
+               alt="Vehicle">
+          <div class="inv-body">
+            <h3 class="inv-title">2022 Honda Civic Touring</h3>
+            <div class="inv-meta">18,600 miles • Automatic</div>
+            <div class="inv-price">
+              <div style="font-weight:800; font-size:18px;">$25,995</div>
+              <div class="badge">Low Miles</div>
+            </div>
+            <div class="btn-row" style="margin-top:6px;">
+              <a class="btn primary" href="contact.html">Check Availability</a>
+              <a class="btn" href="get-prequalified.html">Get Pre-Qualified</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="inv-card">
+          <img class="inv-img"
+               src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=1800&q=60"
+               alt="Vehicle">
+          <div class="inv-body">
+            <h3 class="inv-title">2019 Ford F-150 XLT 4x4</h3>
+            <div class="inv-meta">75,800 miles • Automatic</div>
+            <div class="inv-price">
+              <div style="font-weight:800; font-size:18px;">$28,800</div>
+              <div class="badge">4x4</div>
+            </div>
+            <div class="btn-row" style="margin-top:6px;">
+              <a class="btn primary" href="contact.html">Check Availability</a>
+              <a class="btn" href="get-prequalified.html">Get Pre-Qualified</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px;">
+        <a class="btn primary" href="inventory.html">See Full Inventory</a>
+        <a class="btn" href="trade-sell.html">Trade/Sell Your Car</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINANCING PROMO BAND -->
+  <section class="section">
+    <div class="container">
+      <div class="tile" style="display:grid; grid-template-columns: 1.1fr .9fr; gap:0;">
+        <img class="tile-img" style="height:100%; min-height:320px;"
+             src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=2200&q=60"
+             alt="Financing">
+        <div class="tile-body" style="padding:18px;">
+          <div class="kicker">Financing made easy</div>
+          <h3 style="font-size:22px; margin:8px 0 8px;">Get approved without the headache</h3>
+          <p>
+            Start pre-qualification online, then we follow up with the next steps.
+          </p>
+
+          <div class="grid3" style="grid-template-columns:1fr; gap:10px; margin-top:12px;">
+            <div class="card" style="padding:14px;">
+              <div style="font-weight:800;">Fast responses</div>
+              <div style="color: var(--muted); font-size:14px;">Same-day approvals on most deals.</div>
+            </div>
+            <div class="card" style="padding:14px;">
+              <div style="font-weight:800;">Flexible options</div>
+              <div style="color: var(--muted); font-size:14px;">We work with multiple lenders.</div>
+            </div>
+            <div class="card" style="padding:14px;">
+              <div style="font-weight:800;">Trade-in credit</div>
+              <div style="color: var(--muted); font-size:14px;">Apply your offer to your down payment.</div>
+            </div>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px;">
+            <a class="btn primary" href="get-prequalified.html">Start Pre-Qual</a>
+            <a class="btn" href="contact.html">Contact Finance</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <div class="kicker">Why choose us</div>
+          <h2>Simple process, no weird surprises</h2>
+        </div>
+        <p>Clear communication from start to finish.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <h3 style="margin:0 0 6px;">Inspected inventory</h3>
+          <p>Every vehicle goes through a basic inspection before it hits the lot.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 6px;">Clear pricing</h3>
+          <p>No confusing steps. Keep it transparent and clean.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 6px;">Fast communication</h3>
+          <p>Call, email, or message us. We respond quickly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <div class="kicker">Reviews</div>
+          <h2>Customers love the experience</h2>
+        </div>
+        <p>See what our customers have to say about their experience with Motor Town Inc.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <div style="font-weight:800;">“Super easy buying process.”</div>
+          <p>They answered quick, no pressure, and the car was exactly as described.</p>
+          <div style="color: rgba(255,255,255,.75); font-size:14px;">— Alex R.</div>
+        </div>
+        <div class="card">
+          <div style="font-weight:800;">“Got approved the same day.”</div>
+          <p>Financing was smooth. I was in and out fast.</p>
+          <div style="color: rgba(255,255,255,.75); font-size:14px;">— Maya T.</div>
+        </div>
+        <div class="card">
+          <div style="font-weight:800;">“Service team is legit.”</div>
+          <p>Booked online, showed up, done. No drama.</p>
+          <div style="color: rgba(255,255,255,.75); font-size:14px;">— Chris L.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY STRIP -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <div class="kicker">Gallery</div>
+          <h2>Lot highlights</h2>
+        </div>
+        <p>A look at our inventory, facility, and vehicles on the lot.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="tile">
+          <img class="tile-img"
+               src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=2000&q=60"
+               alt="car lot">
+        </div>
+        <div class="tile">
+          <img class="tile-img"
+               src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=60"
+               alt="car detail">
+        </div>
+        <div class="tile">
+          <img class="tile-img"
+               src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=2000&q=60"
+               alt="showroom">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="card" style="display:grid; grid-template-columns: 1.1fr .9fr; gap: 14px; align-items:center;">
+        <div>
+          <div class="kicker">Ready?</div>
+          <h2 style="margin:10px 0 8px;">Let’s get you into your next car</h2>
+          <p style="color: var(--muted);">
+            Browse inventory, get pre-qualified, or schedule service today.
+          </p>
+          <div class="btn-row" style="margin-top:12px;">
+            <a class="btn primary" href="inventory.html">Browse Inventory</a>
+            <a class="btn" href="get-prequalified.html">Get Pre-Qualified</a>
+            <a class="btn" href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="card" style="padding:14px;">
+          <div style="font-weight:800; margin-bottom:6px;">Weekly deals (demo)</div>
+          <div style="color: var(--muted); font-size:14px;">
+            Sign up to receive updates on new arrivals, special offers, and dealership news.
+          </div>
+          <form class="form" style="margin-top:10px;" onsubmit="event.preventDefault(); alert('Demo: subscribed!');">
+            <div class="field">
+              <label>Email</label>
+              <input required placeholder="you@email.com" />
+            </div>
+            <button class="btn primary" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="footer">
@@ -487,6 +397,7 @@
       <div style="color: rgba(255,255,255,.75);">6880 Telephone Rd #D</div>
       <div style="color: rgba(255,255,255,.75);">Houston, TX 77061</div>
     </div>
+
     <div style="margin-top:10px;">
       <div style="font-weight:800;">832-353-8614</div>
       <div style="color: rgba(255,255,255,.75);">© <span id="y"></span> Motor Town Inc</div>
@@ -495,43 +406,8 @@
 </footer>
 
 <script src="assets/js/nav.js"></script>
-
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
-
-  // Formspree submit handler (works on GitHub Pages)
-  const form = document.getElementById("creditApp");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const btn = form.querySelector('button[type="submit"]');
-    const oldText = btn.textContent;
-    btn.textContent = "Submitting...";
-    btn.disabled = true;
-
-    try {
-      const formData = new FormData(form);
-
-      const res = await fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: { "Accept": "application/json" }
-      });
-
-      if (res.ok) {
-        form.reset();
-        alert("Thank you. Your application has been submitted. We will contact you shortly.");
-      } else {
-        alert("Sorry, something went wrong. Please call 832-353-8614 or email info@motortowncars.com.");
-      }
-    } catch (err) {
-      alert("Sorry, something went wrong. Please call 832-353-8614 or email info@motortowncars.com.");
-    } finally {
-      btn.textContent = oldText;
-      btn.disabled = false;
-    }
-  });
 </script>
 
 </body>
