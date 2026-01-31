@@ -76,43 +76,49 @@
           Prefer to talk directly? Call 832-353-8614 or email info@motortowncars.com.
         </p>
 
-        <form class="form" onsubmit="event.preventDefault(); alert('Demo: request submitted!');">
+        <!-- WORKING MAILTO FORM -->
+        <form
+          class="form"
+          action="mailto:info@motortowncars.com?subject=Trade%2FSell%20Request%20-%20Motor%20Town%20Inc"
+          method="POST"
+          enctype="text/plain"
+        >
           <div class="split">
             <div class="field">
               <label>Full Name</label>
-              <input required />
+              <input type="text" name="Full Name" required placeholder="Your name" />
             </div>
             <div class="field">
               <label>Phone</label>
-              <input required />
+              <input type="tel" name="Phone" required placeholder="832-353-8614" />
             </div>
           </div>
 
           <div class="split">
             <div class="field">
               <label>Year</label>
-              <input required />
+              <input type="text" name="Year" required placeholder="2018" />
             </div>
             <div class="field">
               <label>Make</label>
-              <input required />
+              <input type="text" name="Make" required placeholder="Toyota" />
             </div>
           </div>
 
           <div class="split">
             <div class="field">
               <label>Model</label>
-              <input required />
+              <input type="text" name="Model" required placeholder="Camry" />
             </div>
             <div class="field">
               <label>Mileage</label>
-              <input required />
+              <input type="text" name="Mileage" required placeholder="75000" />
             </div>
           </div>
 
           <div class="field">
             <label>Notes (optional)</label>
-            <textarea placeholder="Condition, repairs, accidents, etc."></textarea>
+            <textarea name="Notes" placeholder="Condition, repairs, accidents, etc." rows="4"></textarea>
           </div>
 
           <div class="btn-row">
