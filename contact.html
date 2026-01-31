@@ -19,13 +19,17 @@
       </div>
     </a>
 
-    <button class="hamburger" aria-label="Open menu" aria-expanded="false" type="button">Menu</button>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" type="button">
+      Menu
+    </button>
 
     <nav class="nav" aria-label="Primary">
       <a class="nav-link" href="inventory.html">Inventory</a>
 
       <div class="nav-item has-dd">
-        <a class="nav-link" href="#" data-dd="true">Financing <span class="chev">▼</span></a>
+        <a class="nav-link" href="#" data-dd="true">
+          Financing <span class="chev">▼</span>
+        </a>
         <div class="dropdown">
           <a href="financing.html">Finance</a>
           <a href="get-prequalified.html">Get Pre-Qualified</a>
@@ -36,7 +40,9 @@
       <a class="nav-link" href="trade-sell.html">Trade/Sell Your Car</a>
 
       <div class="nav-item has-dd">
-        <a class="nav-link" href="#" data-dd="true">Services <span class="chev">▼</span></a>
+        <a class="nav-link" href="#" data-dd="true">
+          Services <span class="chev">▼</span>
+        </a>
         <div class="dropdown">
           <a href="services.html">Service Overview</a>
           <a href="schedule-service.html">Schedule Service</a>
@@ -51,18 +57,23 @@
 </header>
 
 <main>
+
+  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div class="tile">
-        <img class="tile-img" style="height:320px"
-             src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=2200&q=60"
-             alt="Contact">
+        <img
+          class="tile-img"
+          style="height:320px"
+          src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=2200&q=60"
+          alt="Contact Motor Town Inc"
+        >
+
         <div class="tile-body">
           <div class="kicker">Contact</div>
           <h2 style="margin:8px 0 6px;">Get in touch</h2>
-          <p>
-            Call or email us, or send a message using the form below.
-          </p>
+          <p>Call or email us, or send a message using the form below.</p>
+
           <div class="btn-row">
             <a class="btn primary" href="inventory.html">Browse Inventory</a>
             <a class="btn" href="get-prequalified.html">Get Pre-Qualified</a>
@@ -72,72 +83,93 @@
     </div>
   </section>
 
+  <!-- CONTACT INFO -->
   <section class="section">
     <div class="container">
       <div class="grid3">
+
         <div class="card">
-          <h3 style="margin:0 0 6px;">Email</h3>
-          <p style="margin:0;">info@motortowncars.com</p>
+          <h3>Email</h3>
+          <p>info@motortowncars.com</p>
         </div>
+
         <div class="card">
-          <h3 style="margin:0 0 6px;">Phone</h3>
-          <p style="margin:0;">832-353-8614</p>
+          <h3>Phone</h3>
+          <p>832-353-8614</p>
         </div>
+
         <div class="card">
-          <h3 style="margin:0 0 6px;">Address</h3>
-          <p style="margin:0;">
+          <h3>Address</h3>
+          <p>
             6880 Telephone Rd #D<br>
             Houston, TX 77061
           </p>
         </div>
+
       </div>
     </div>
   </section>
 
+  <!-- FORM + MAP -->
   <section class="section">
     <div class="container">
-      <div class="card" style="display:grid; grid-template-columns: 1.05fr .95fr; gap: 14px; align-items:start;">
 
+      <div class="card"
+           style="display:grid; grid-template-columns:1.05fr .95fr; gap:14px; align-items:start;">
+
+        <!-- FORM -->
         <div>
+
           <div class="kicker">Message</div>
           <h2 style="margin:10px 0 8px;">Send a message</h2>
-          <p style="color: var(--muted); margin-bottom:12px;">
-            Demo form for now. You can connect it to email or a backend later.
+          <p style="color:var(--muted); margin-bottom:12px;">
+            Contact Motor Town Inc directly via email.
           </p>
 
-          <form class="form" onsubmit="event.preventDefault(); alert('Demo: message sent!');">
+          <form
+            class="form"
+            action="mailto:info@motortowncars.com?subject=Website Contact - Motor Town Inc"
+            method="POST"
+            enctype="text/plain"
+          >
+
             <div class="split">
               <div class="field">
                 <label>Name</label>
-                <input required placeholder="Full name" />
+                <input type="text" name="Name" required placeholder="Full name">
               </div>
+
               <div class="field">
                 <label>Phone</label>
-                <input required placeholder="832-353-8614" />
+                <input type="tel" name="Phone" required placeholder="832-353-8614">
               </div>
             </div>
 
             <div class="field">
               <label>Email</label>
-              <input required placeholder="info@motortowncars.com" />
+              <input type="email" name="Email" required placeholder="your@email.com">
             </div>
 
             <div class="field">
               <label>Message</label>
-              <textarea placeholder="How can we help?"></textarea>
+              <textarea name="Message" rows="4" placeholder="How can we help?"></textarea>
             </div>
 
             <div class="btn-row">
               <button class="btn primary" type="submit">Send Message</button>
               <a class="btn" href="inventory.html">Browse Inventory</a>
             </div>
+
           </form>
+
         </div>
 
+        <!-- MAP -->
         <div>
           <div class="card" style="padding:12px;">
             <div class="kicker" style="margin-bottom:8px;">Map</div>
-            <div style="border-radius: 14px; overflow:hidden; border:1px solid rgba(255,255,255,.12);">
+
+            <div style="border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,.12);">
               <iframe
                 title="Map"
                 src="https://www.google.com/maps?q=6880%20Telephone%20Rd%20%23D%20Houston%20TX%2077061&output=embed"
@@ -148,13 +180,15 @@
                 referrerpolicy="no-referrer-when-downgrade">
               </iframe>
             </div>
-            <div style="color: var(--muted); font-size: 13px; margin-top:8px;">
+
+            <div style="color:var(--muted); font-size:13px; margin-top:8px;">
               6880 Telephone Rd #D • Houston, TX 77061
             </div>
           </div>
         </div>
 
       </div>
+
     </div>
   </section>
 
@@ -162,17 +196,19 @@
 
 <footer class="footer">
   <div class="container">
+
     <div>
-      <div style="font-weight:800;">Motor Town Inc</div>
-      <div style="color: rgba(255,255,255,.75);">info@motortowncars.com</div>
-      <div style="color: rgba(255,255,255,.75);">6880 Telephone Rd #D</div>
-      <div style="color: rgba(255,255,255,.75);">Houston, TX 77061</div>
+      <strong>Motor Town Inc</strong><br>
+      info@motortowncars.com<br>
+      6880 Telephone Rd #D<br>
+      Houston, TX 77061
     </div>
 
     <div style="margin-top:10px;">
-      <div style="font-weight:800;">832-353-8614</div>
-      <div style="color: rgba(255,255,255,.75);">© <span id="y"></span> Motor Town Inc</div>
+      <strong>832-353-8614</strong><br>
+      © <span id="y"></span> Motor Town Inc
     </div>
+
   </div>
 </footer>
 
@@ -180,5 +216,6 @@
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
