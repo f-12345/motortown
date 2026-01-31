@@ -72,53 +72,60 @@
           For quick questions call 832-353-8614 or email info@motortowncars.com.
         </p>
 
-        <form class="form" onsubmit="event.preventDefault(); alert('Demo: service requested!');">
+        <!-- WORKING MAILTO FORM -->
+        <form
+          class="form"
+          action="mailto:info@motortowncars.com?subject=Service%20Appointment%20Request%20-%20Motor%20Town%20Inc"
+          method="POST"
+          enctype="text/plain"
+        >
           <div class="split">
             <div class="field">
               <label>Name</label>
-              <input required />
+              <input type="text" name="Name" required placeholder="Full name" />
             </div>
             <div class="field">
               <label>Phone</label>
-              <input required />
+              <input type="tel" name="Phone" required placeholder="832-353-8614" />
             </div>
           </div>
 
           <div class="split">
             <div class="field">
               <label>Vehicle</label>
-              <input placeholder="Year / Make / Model" required />
+              <input type="text" name="Vehicle" placeholder="Year / Make / Model" required />
             </div>
             <div class="field">
               <label>Preferred Date</label>
-              <input required placeholder="MM/DD/YYYY" />
+              <input type="text" name="Preferred Date" required placeholder="MM/DD/YYYY" />
             </div>
           </div>
 
           <div class="split">
             <div class="field">
               <label>Service Type</label>
-              <select required>
-                <option>Oil Change</option>
-                <option>Brakes</option>
-                <option>Diagnostics</option>
-                <option>Tires</option>
-                <option>Other</option>
+              <select name="Service Type" required>
+                <option value="Oil Change">Oil Change</option>
+                <option value="Brakes">Brakes</option>
+                <option value="Diagnostics">Diagnostics</option>
+                <option value="Tires">Tires</option>
+                <option value="Other">Other</option>
               </select>
             </div>
+
             <div class="field">
               <label>Preferred Time</label>
-              <select required>
-                <option>Morning</option>
-                <option>Midday</option>
-                <option>Afternoon</option>
+              <select name="Preferred Time" required>
+                <option value="Morning">Morning</option>
+                <option value="Midday">Midday</option>
+                <option value="Afternoon">Afternoon</option>
               </select>
             </div>
           </div>
 
           <div class="field">
             <label>Notes (optional)</label>
-            <textarea placeholder="Describe the issue or request"></textarea>
+            <textarea name="Notes" placeholder="Describe the issue or request" rows="4"></textarea>
           </div>
 
           <div class="btn-row">
