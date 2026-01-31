@@ -29,12 +29,9 @@
           <a href="financing.html">Finance</a>
           <a href="get-prequalified.html">Get Pre-Qualified</a>
           <a href="financing-faq.html">Financing FAQ</a>
+          <a href="https://motortowncars.startyourcreditapproval.com/" target="_blank" rel="noopener">Lenders</a>
         </div>
       </div>
-
-      <nav class="nav">
-        <a class="nav-link" href="https://motortowncars.startyourcreditapproval.com/">Lenders</a>
-      </nav>
 
       <a class="nav-link" href="trade-sell.html">Trade/Sell Your Car</a>
 
@@ -62,7 +59,7 @@
         <div class="tile-body">
           <div class="kicker">Get Pre-Qualified</div>
           <h2 style="margin:8px 0 6px;">Start the financing process</h2>
-          <p>No obligation. We follow up with next steps after you submit.</p>
+          <p>No obligation. After you submit, our team will review your information and follow up with next steps.</p>
         </div>
       </div>
     </div>
@@ -74,394 +71,408 @@
         <h2>Pre-Qualification Form</h2>
         <p style="color: var(--muted); margin-top:6px;">
           Complete the secure pre-qualification form below to begin the financing process.
-  If you have any questions, please call 832-353-8614 or email info@motortowncars.com.
+          If you have any questions, please call 832-353-8614 or email info@motortowncars.com.
         </p>
 
-        <form class="form" id="creditApp">
-  <h3 style="margin-top:0;">Auto Credit Application</h3>
+        <!-- IMPORTANT:
+             Replace YOUR_FORMSPREE_ENDPOINT with your Formspree URL, like:
+             https://formspree.io/f/abcdwxyz
+        -->
+        <form class="form" id="creditApp" action="YOUR_FORMSPREE_ENDPOINT" method="POST">
+          <!-- Email Subject -->
+          <input type="hidden" name="_subject" value="New Pre-Qualification Application - Motor Town Inc" />
 
-  <!-- DEALER INFO -->
-  <div class="card" style="margin: 14px 0;">
-    <h4 style="margin:0 0 10px;">Dealer Information</h4>
+          <h3 style="margin-top:0;">Auto Credit Application</h3>
 
-    <div class="split">
-      <div class="field">
-        <label for="dealerName">Dealer Name</label>
-        <input id="dealerName" name="dealerName" value="Motor Town Inc" />
-      </div>
-      <div class="field">
-        <label for="dealerPhone">Phone</label>
-        <input id="dealerPhone" name="dealerPhone" value="832-353-8614" />
-      </div>
-    </div>
+          <!-- DEALER INFO -->
+          <div class="card" style="margin: 14px 0;">
+            <h4 style="margin:0 0 10px;">Dealer Information</h4>
 
-    <div class="split">
-      <div class="field">
-        <label for="dealerAddress">Dealer Address</label>
-        <input id="dealerAddress" name="dealerAddress" value="6880 Telephone Rd #D, Houston, TX 77061" />
-      </div>
-      <div class="field">
-        <label for="dealerEmail">Email</label>
-        <input id="dealerEmail" name="dealerEmail" value="info@motortowncars.com" />
-      </div>
-    </div>
-  </div>
+            <div class="split">
+              <div class="field">
+                <label for="dealerName">Dealer Name</label>
+                <input id="dealerName" name="Dealer Name" value="Motor Town Inc" readonly />
+              </div>
+              <div class="field">
+                <label for="dealerPhone">Phone</label>
+                <input id="dealerPhone" name="Dealer Phone" value="832-353-8614" readonly />
+              </div>
+            </div>
 
-  <!-- APPLICANT -->
-  <div class="card" style="margin: 14px 0;">
-    <h4 style="margin:0 0 10px;">Applicant Information</h4>
+            <div class="split">
+              <div class="field">
+                <label for="dealerAddress">Dealer Address</label>
+                <input id="dealerAddress" name="Dealer Address" value="6880 Telephone Rd #D, Houston, TX 77061" readonly />
+              </div>
+              <div class="field">
+                <label for="dealerEmail">Email</label>
+                <input id="dealerEmail" name="Dealer Email" value="info@motortowncars.com" readonly />
+              </div>
+            </div>
+          </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="appFullName">Full Name</label>
-        <input id="appFullName" name="appFullName" required autocomplete="name" />
-      </div>
-      <div class="field">
-        <label for="appDob">Date of Birth</label>
-        <input id="appDob" name="appDob" type="date" required autocomplete="bday" />
-      </div>
-    </div>
+          <!-- APPLICANT -->
+          <div class="card" style="margin: 14px 0;">
+            <h4 style="margin:0 0 10px;">Applicant Information</h4>
 
-    <div class="split">
-      <div class="field">
-        <label for="appSsn">Social Security Number</label>
-        <input id="appSsn" name="appSsn" inputmode="numeric" placeholder="XXX-XX-XXXX" autocomplete="off" />
-      </div>
-      <div class="field">
-        <label for="appDl">Driver License #</label>
-        <input id="appDl" name="appDl" autocomplete="off" />
-      </div>
-    </div>
+            <div class="split">
+              <div class="field">
+                <label for="appFullName">Full Name</label>
+                <input id="appFullName" name="Applicant Full Name" required autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="appDob">Date of Birth</label>
+                <input id="appDob" name="Applicant Date of Birth" type="date" required autocomplete="bday" />
+              </div>
+            </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="appDlState">DL State</label>
-        <input id="appDlState" name="appDlState" maxlength="2" placeholder="TX" />
-      </div>
-      <div class="field">
-        <label for="appPhone">Phone</label>
-        <input id="appPhone" name="appPhone" required inputmode="tel" autocomplete="tel" />
-      </div>
-    </div>
+            <div class="split">
+              <div class="field">
+                <label for="appSsn">Social Security Number (optional)</label>
+                <input id="appSsn" name="Applicant SSN (optional)" inputmode="numeric" placeholder="XXX-XX-XXXX" autocomplete="off" />
+                <div style="color: var(--muted); font-size: 12px; margin-top: 6px;">
+                  For security, you may leave this blank and provide it by phone if preferred.
+                </div>
+              </div>
+              <div class="field">
+                <label for="appDl">Driver License #</label>
+                <input id="appDl" name="Applicant Driver License Number" autocomplete="off" />
+              </div>
+            </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="appEmail">Email</label>
-        <input id="appEmail" name="appEmail" type="email" required autocomplete="email" />
-      </div>
-      <div class="field">
-        <label for="appAddress">Current Address</label>
-        <input id="appAddress" name="appAddress" required autocomplete="street-address" />
-      </div>
-    </div>
+            <div class="split">
+              <div class="field">
+                <label for="appDlState">DL State</label>
+                <input id="appDlState" name="Applicant DL State" maxlength="2" placeholder="TX" />
+              </div>
+              <div class="field">
+                <label for="appPhone">Phone</label>
+                <input id="appPhone" name="Applicant Phone" required inputmode="tel" autocomplete="tel" />
+              </div>
+            </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="appCity">City</label>
-        <input id="appCity" name="appCity" required autocomplete="address-level2" />
-      </div>
-      <div class="field">
-        <label for="appState">State</label>
-        <input id="appState" name="appState" required maxlength="2" placeholder="TX" autocomplete="address-level1" />
-      </div>
-    </div>
+            <div class="split">
+              <div class="field">
+                <label for="appEmail">Email</label>
+                <input id="appEmail" name="Applicant Email" type="email" required autocomplete="email" />
+              </div>
+              <div class="field">
+                <label for="appAddress">Current Address</label>
+                <input id="appAddress" name="Applicant Address" required autocomplete="street-address" />
+              </div>
+            </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="appZip">Zip</label>
-        <input id="appZip" name="appZip" required inputmode="numeric" autocomplete="postal-code" />
-      </div>
-      <div class="field">
-        <label for="appTimeAtAddress">Time at Address</label>
-        <input id="appTimeAtAddress" name="appTimeAtAddress" placeholder="e.g., 2 years" />
-      </div>
-    </div>
+            <div class="split">
+              <div class="field">
+                <label for="appCity">City</label>
+                <input id="appCity" name="Applicant City" required autocomplete="address-level2" />
+              </div>
+              <div class="field">
+                <label for="appState">State</label>
+                <input id="appState" name="Applicant State" required maxlength="2" placeholder="TX" autocomplete="address-level1" />
+              </div>
+            </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="housing">Housing</label>
-        <select id="housing" name="housing" required>
-          <option value="">Select</option>
-          <option>Rent</option>
-          <option>Own</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="housingPay">Monthly Housing Payment</label>
-        <input id="housingPay" name="housingPay" inputmode="decimal" placeholder="$" />
-      </div>
-    </div>
-  </div>
+            <div class="split">
+              <div class="field">
+                <label for="appZip">Zip</label>
+                <input id="appZip" name="Applicant Zip" required inputmode="numeric" autocomplete="postal-code" />
+              </div>
+              <div class="field">
+                <label for="appTimeAtAddress">Time at Address</label>
+                <input id="appTimeAtAddress" name="Applicant Time at Address" placeholder="e.g., 2 years" />
+              </div>
+            </div>
 
-  <!-- EMPLOYMENT -->
-  <div class="card" style="margin: 14px 0;">
-    <h4 style="margin:0 0 10px;">Employment Information</h4>
+            <div class="split">
+              <div class="field">
+                <label for="housing">Housing</label>
+                <select id="housing" name="Housing" required>
+                  <option value="">Select</option>
+                  <option>Rent</option>
+                  <option>Own</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="housingPay">Monthly Housing Payment</label>
+                <input id="housingPay" name="Monthly Housing Payment" inputmode="decimal" placeholder="$" />
+              </div>
+            </div>
+          </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="empName">Employer Name</label>
-        <input id="empName" name="empName" />
-      </div>
-      <div class="field">
-        <label for="jobTitle">Job Title</label>
-        <input id="jobTitle" name="jobTitle" />
-      </div>
-    </div>
+          <!-- EMPLOYMENT -->
+          <div class="card" style="margin: 14px 0;">
+            <h4 style="margin:0 0 10px;">Employment Information</h4>
 
-    <div class="field">
-      <label for="empAddress">Employer Address</label>
-      <input id="empAddress" name="empAddress" />
-    </div>
+            <div class="split">
+              <div class="field">
+                <label for="empName">Employer Name</label>
+                <input id="empName" name="Employer Name" />
+              </div>
+              <div class="field">
+                <label for="jobTitle">Job Title</label>
+                <input id="jobTitle" name="Job Title" />
+              </div>
+            </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="timeEmployed">Time Employed</label>
-        <input id="timeEmployed" name="timeEmployed" placeholder="e.g., 3 years" />
-      </div>
-      <div class="field">
-        <label for="monthlyIncome">Monthly Income (Gross)</label>
-        <input id="monthlyIncome" name="monthlyIncome" inputmode="decimal" placeholder="$" />
-      </div>
-    </div>
+            <div class="field">
+              <label for="empAddress">Employer Address</label>
+              <input id="empAddress" name="Employer Address" />
+            </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="workPhone">Work Phone</label>
-        <input id="workPhone" name="workPhone" inputmode="tel" />
-      </div>
-      <div class="field">
-        <label for="otherIncome">Other Income</label>
-        <input id="otherIncome" name="otherIncome" inputmode="decimal" placeholder="$" />
-      </div>
-    </div>
+            <div class="split">
+              <div class="field">
+                <label for="timeEmployed">Time Employed</label>
+                <input id="timeEmployed" name="Time Employed" placeholder="e.g., 3 years" />
+              </div>
+              <div class="field">
+                <label for="monthlyIncome">Monthly Income (Gross)</label>
+                <input id="monthlyIncome" name="Monthly Income (Gross)" inputmode="decimal" placeholder="$" />
+              </div>
+            </div>
 
-    <div class="field">
-      <label for="otherIncomeSource">Other Income Source</label>
-      <input id="otherIncomeSource" name="otherIncomeSource" placeholder="e.g., Self-employed, SSI, etc." />
-    </div>
-  </div>
+            <div class="split">
+              <div class="field">
+                <label for="workPhone">Work Phone</label>
+                <input id="workPhone" name="Work Phone" inputmode="tel" />
+              </div>
+              <div class="field">
+                <label for="otherIncome">Other Income</label>
+                <input id="otherIncome" name="Other Income" inputmode="decimal" placeholder="$" />
+              </div>
+            </div>
 
-  <!-- CO-APPLICANT -->
-  <div class="card" style="margin: 14px 0;">
-    <h4 style="margin:0 0 10px;">Co-Applicant Information (if applicable)</h4>
+            <div class="field">
+              <label for="otherIncomeSource">Other Income Source</label>
+              <input id="otherIncomeSource" name="Other Income Source" placeholder="e.g., Self-employed, SSI, etc." />
+            </div>
+          </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="coFullName">Full Name</label>
-        <input id="coFullName" name="coFullName" />
-      </div>
-      <div class="field">
-        <label for="coDob">Date of Birth</label>
-        <input id="coDob" name="coDob" type="date" />
-      </div>
-    </div>
+          <!-- CO-APPLICANT -->
+          <div class="card" style="margin: 14px 0;">
+            <h4 style="margin:0 0 10px;">Co-Applicant Information (if applicable)</h4>
 
-    <div class="split">
-      <div class="field">
-        <label for="coSsn">SSN</label>
-        <input id="coSsn" name="coSsn" inputmode="numeric" placeholder="XXX-XX-XXXX" autocomplete="off" />
-      </div>
-      <div class="field">
-        <label for="coPhone">Phone</label>
-        <input id="coPhone" name="coPhone" inputmode="tel" />
-      </div>
-    </div>
+            <div class="split">
+              <div class="field">
+                <label for="coFullName">Full Name</label>
+                <input id="coFullName" name="Co-Applicant Full Name" />
+              </div>
+              <div class="field">
+                <label for="coDob">Date of Birth</label>
+                <input id="coDob" name="Co-Applicant Date of Birth" type="date" />
+              </div>
+            </div>
 
-    <div class="field">
-      <label for="coAddress">Address</label>
-      <input id="coAddress" name="coAddress" />
-    </div>
+            <div class="split">
+              <div class="field">
+                <label for="coSsn">SSN (optional)</label>
+                <input id="coSsn" name="Co-Applicant SSN (optional)" inputmode="numeric" placeholder="XXX-XX-XXXX" autocomplete="off" />
+              </div>
+              <div class="field">
+                <label for="coPhone">Phone</label>
+                <input id="coPhone" name="Co-Applicant Phone" inputmode="tel" />
+              </div>
+            </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="coEmployer">Employer</label>
-        <input id="coEmployer" name="coEmployer" />
-      </div>
-      <div class="field">
-        <label for="coIncome">Monthly Income</label>
-        <input id="coIncome" name="coIncome" inputmode="decimal" placeholder="$" />
-      </div>
-    </div>
-  </div>
+            <div class="field">
+              <label for="coAddress">Address</label>
+              <input id="coAddress" name="Co-Applicant Address" />
+            </div>
 
-  <!-- VEHICLE -->
-  <div class="card" style="margin: 14px 0;">
-    <h4 style="margin:0 0 10px;">Vehicle Information</h4>
+            <div class="split">
+              <div class="field">
+                <label for="coEmployer">Employer</label>
+                <input id="coEmployer" name="Co-Applicant Employer" />
+              </div>
+              <div class="field">
+                <label for="coIncome">Monthly Income</label>
+                <input id="coIncome" name="Co-Applicant Monthly Income" inputmode="decimal" placeholder="$" />
+              </div>
+            </div>
+          </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="vehYear">Year</label>
-        <input id="vehYear" name="vehYear" inputmode="numeric" placeholder="YYYY" />
-      </div>
-      <div class="field">
-        <label for="vehMake">Make</label>
-        <input id="vehMake" name="vehMake" />
-      </div>
-    </div>
+          <!-- VEHICLE -->
+          <div class="card" style="margin: 14px 0;">
+            <h4 style="margin:0 0 10px;">Vehicle Information</h4>
 
-    <div class="split">
-      <div class="field">
-        <label for="vehModel">Model</label>
-        <input id="vehModel" name="vehModel" />
-      </div>
-      <div class="field">
-        <label for="vehVin">VIN</label>
-        <input id="vehVin" name="vehVin" />
-      </div>
-    </div>
+            <div class="split">
+              <div class="field">
+                <label for="vehYear">Year</label>
+                <input id="vehYear" name="Vehicle Year" inputmode="numeric" placeholder="YYYY" />
+              </div>
+              <div class="field">
+                <label for="vehMake">Make</label>
+                <input id="vehMake" name="Vehicle Make" />
+              </div>
+            </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="vehMileage">Mileage</label>
-        <input id="vehMileage" name="vehMileage" inputmode="numeric" />
-      </div>
-      <div class="field">
-        <label for="vehPrice">Selling Price</label>
-        <input id="vehPrice" name="vehPrice" inputmode="decimal" placeholder="$" />
-      </div>
-    </div>
+            <div class="split">
+              <div class="field">
+                <label for="vehModel">Model</label>
+                <input id="vehModel" name="Vehicle Model" />
+              </div>
+              <div class="field">
+                <label for="vehVin">VIN</label>
+                <input id="vehVin" name="Vehicle VIN" />
+              </div>
+            </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="vehDown">Down Payment</label>
-        <input id="vehDown" name="vehDown" inputmode="decimal" placeholder="$" />
-      </div>
-      <div class="field">
-        <label for="vehFinance">Amount to Finance</label>
-        <input id="vehFinance" name="vehFinance" inputmode="decimal" placeholder="$" />
-      </div>
-    </div>
-  </div>
+            <div class="split">
+              <div class="field">
+                <label for="vehMileage">Mileage</label>
+                <input id="vehMileage" name="Vehicle Mileage" inputmode="numeric" />
+              </div>
+              <div class="field">
+                <label for="vehPrice">Selling Price</label>
+                <input id="vehPrice" name="Vehicle Selling Price" inputmode="decimal" placeholder="$" />
+              </div>
+            </div>
 
-  <!-- TRADE-IN -->
-  <div class="card" style="margin: 14px 0;">
-    <h4 style="margin:0 0 10px;">Trade-In Information (if applicable)</h4>
+            <div class="split">
+              <div class="field">
+                <label for="vehDown">Down Payment</label>
+                <input id="vehDown" name="Down Payment" inputmode="decimal" placeholder="$" />
+              </div>
+              <div class="field">
+                <label for="vehFinance">Amount to Finance</label>
+                <input id="vehFinance" name="Amount to Finance" inputmode="decimal" placeholder="$" />
+              </div>
+            </div>
+          </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="tradeYear">Year</label>
-        <input id="tradeYear" name="tradeYear" inputmode="numeric" placeholder="YYYY" />
-      </div>
-      <div class="field">
-        <label for="tradeMake">Make</label>
-        <input id="tradeMake" name="tradeMake" />
-      </div>
-    </div>
+          <!-- TRADE-IN -->
+          <div class="card" style="margin: 14px 0;">
+            <h4 style="margin:0 0 10px;">Trade-In Information (if applicable)</h4>
 
-    <div class="split">
-      <div class="field">
-        <label for="tradeModel">Model</label>
-        <input id="tradeModel" name="tradeModel" />
-      </div>
-      <div class="field">
-        <label for="tradeVin">VIN</label>
-        <input id="tradeVin" name="tradeVin" />
-      </div>
-    </div>
+            <div class="split">
+              <div class="field">
+                <label for="tradeYear">Year</label>
+                <input id="tradeYear" name="Trade-In Year" inputmode="numeric" placeholder="YYYY" />
+              </div>
+              <div class="field">
+                <label for="tradeMake">Make</label>
+                <input id="tradeMake" name="Trade-In Make" />
+              </div>
+            </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="tradeMileage">Mileage</label>
-        <input id="tradeMileage" name="tradeMileage" inputmode="numeric" />
-      </div>
-      <div class="field">
-        <label for="tradeValue">Estimated Value</label>
-        <input id="tradeValue" name="tradeValue" inputmode="decimal" placeholder="$" />
-      </div>
-    </div>
+            <div class="split">
+              <div class="field">
+                <label for="tradeModel">Model</label>
+                <input id="tradeModel" name="Trade-In Model" />
+              </div>
+              <div class="field">
+                <label for="tradeVin">VIN</label>
+                <input id="tradeVin" name="Trade-In VIN" />
+              </div>
+            </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="tradeLoanBal">Loan Balance</label>
-        <input id="tradeLoanBal" name="tradeLoanBal" inputmode="decimal" placeholder="$" />
-      </div>
-      <div class="field">
-        <label for="tradeNotes">Notes (optional)</label>
-        <input id="tradeNotes" name="tradeNotes" placeholder="Any trade details" />
-      </div>
-    </div>
-  </div>
+            <div class="split">
+              <div class="field">
+                <label for="tradeMileage">Mileage</label>
+                <input id="tradeMileage" name="Trade-In Mileage" inputmode="numeric" />
+              </div>
+              <div class="field">
+                <label for="tradeValue">Estimated Value</label>
+                <input id="tradeValue" name="Trade-In Estimated Value" inputmode="decimal" placeholder="$" />
+              </div>
+            </div>
 
-  <!-- REFERENCES -->
-  <div class="card" style="margin: 14px 0;">
-    <h4 style="margin:0 0 10px;">References</h4>
+            <div class="split">
+              <div class="field">
+                <label for="tradeLoanBal">Loan Balance</label>
+                <input id="tradeLoanBal" name="Trade-In Loan Balance" inputmode="decimal" placeholder="$" />
+              </div>
+              <div class="field">
+                <label for="tradeNotes">Notes (optional)</label>
+                <input id="tradeNotes" name="Trade-In Notes (optional)" placeholder="Any trade details" />
+              </div>
+            </div>
+          </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="ref1Name">Reference 1 Name</label>
-        <input id="ref1Name" name="ref1Name" />
-      </div>
-      <div class="field">
-        <label for="ref1Phone">Reference 1 Phone</label>
-        <input id="ref1Phone" name="ref1Phone" inputmode="tel" />
-      </div>
-    </div>
+          <!-- REFERENCES -->
+          <div class="card" style="margin: 14px 0;">
+            <h4 style="margin:0 0 10px;">References</h4>
 
-    <div class="split">
-      <div class="field">
-        <label for="ref2Name">Reference 2 Name</label>
-        <input id="ref2Name" name="ref2Name" />
-      </div>
-      <div class="field">
-        <label for="ref2Phone">Reference 2 Phone</label>
-        <input id="ref2Phone" name="ref2Phone" inputmode="tel" />
-      </div>
-    </div>
-  </div>
+            <div class="split">
+              <div class="field">
+                <label for="ref1Name">Reference 1 Name</label>
+                <input id="ref1Name" name="Reference 1 Name" />
+              </div>
+              <div class="field">
+                <label for="ref1Phone">Reference 1 Phone</label>
+                <input id="ref1Phone" name="Reference 1 Phone" inputmode="tel" />
+              </div>
+            </div>
 
-  <!-- AUTHORIZATION -->
-  <div class="card" style="margin: 14px 0;">
-    <h4 style="margin:0 0 10px;">Authorization</h4>
-    <p style="color: var(--muted); margin-top:0;">
-      I authorize the Dealer and its lending partners to obtain my consumer credit report and verify employment,
-      income, residency, and other information provided. I certify that all information is true and correct.
-    </p>
+            <div class="split">
+              <div class="field">
+                <label for="ref2Name">Reference 2 Name</label>
+                <input id="ref2Name" name="Reference 2 Name" />
+              </div>
+              <div class="field">
+                <label for="ref2Phone">Reference 2 Phone</label>
+                <input id="ref2Phone" name="Reference 2 Phone" inputmode="tel" />
+              </div>
+            </div>
+          </div>
 
-    <div class="field">
-      <label>
-        <input type="checkbox" id="consent" name="consent" required />
-        I agree and authorize credit and information verification.
-      </label>
-    </div>
+          <!-- AUTHORIZATION -->
+          <div class="card" style="margin: 14px 0;">
+            <h4 style="margin:0 0 10px;">Authorization</h4>
+            <p style="color: var(--muted); margin-top:0;">
+              I authorize the Dealer and its lending partners to obtain my consumer credit report and verify employment,
+              income, residency, and other information provided. I certify that all information is true and correct.
+            </p>
 
-    <div class="split">
-      <div class="field">
-        <label for="appSignature">Applicant Signature (type full name)</label>
-        <input id="appSignature" name="appSignature" required />
-      </div>
-      <div class="field">
-        <label for="appSigDate">Date</label>
-        <input id="appSigDate" name="appSigDate" type="date" required />
-      </div>
-    </div>
+            <div class="field">
+              <label>
+                <input type="checkbox" id="consent" name="Authorization Consent" required />
+                I agree and authorize credit and information verification.
+              </label>
+            </div>
 
-    <div class="split">
-      <div class="field">
-        <label for="coSignature">Co-Applicant Signature (type full name)</label>
-        <input id="coSignature" name="coSignature" />
-      </div>
-      <div class="field">
-        <label for="coSigDate">Date</label>
-        <input id="coSigDate" name="coSigDate" type="date" />
-      </div>
-    </div>
-  </div>
+            <div class="split">
+              <div class="field">
+                <label for="appSignature">Applicant Signature (type full name)</label>
+                <input id="appSignature" name="Applicant Signature" required />
+              </div>
+              <div class="field">
+                <label for="appSigDate">Date</label>
+                <input id="appSigDate" name="Applicant Signature Date" type="date" required />
+              </div>
+            </div>
 
-  <div class="btn-row">
-    <button class="btn primary" type="submit">Submit Application</button>
-    <button class="btn" type="reset">Clear</button>
-    <a class="btn" href="inventory.html">Browse Inventory</a>
-  </div>
-</form>
+            <div class="split">
+              <div class="field">
+                <label for="coSignature">Co-Applicant Signature (type full name)</label>
+                <input id="coSignature" name="Co-Applicant Signature" />
+              </div>
+              <div class="field">
+                <label for="coSigDate">Date</label>
+                <input id="coSigDate" name="Co-Applicant Signature Date" type="date" />
+              </div>
+            </div>
+          </div>
 
-<script>
-  // Demo submit handler (replace with real backend later)
-  document.getElementById("creditApp").addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Demo submitted. Connect this to your backend/lender endpoint next.");
-  });
-</script>
+          <div class="btn-row">
+            <button class="btn primary" type="submit">Submit Application</button>
+            <button class="btn" type="reset">Clear</button>
+            <a class="btn" href="inventory.html">Browse Inventory</a>
+          </div>
+        </form>
+
+        <div class="card" style="margin-top:14px;">
+          <div style="font-weight:800; margin-bottom:6px;">Prefer a secure lender application?</div>
+          <div style="color: var(--muted); font-size:14px;">
+            You can also complete your credit approval through our lender portal.
+          </div>
+          <div class="btn-row" style="margin-top:10px;">
+            <a class="btn primary" href="https://motortowncars.startyourcreditapproval.com/" target="_blank" rel="noopener">
+              Complete Secure Credit Application
+            </a>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -484,8 +495,44 @@
 </footer>
 
 <script src="assets/js/nav.js"></script>
+
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
+
+  // Formspree submit handler (works on GitHub Pages)
+  const form = document.getElementById("creditApp");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const btn = form.querySelector('button[type="submit"]');
+    const oldText = btn.textContent;
+    btn.textContent = "Submitting...";
+    btn.disabled = true;
+
+    try {
+      const formData = new FormData(form);
+
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (res.ok) {
+        form.reset();
+        alert("Thank you. Your application has been submitted. We will contact you shortly.");
+      } else {
+        alert("Sorry, something went wrong. Please call 832-353-8614 or email info@motortowncars.com.");
+      }
+    } catch (err) {
+      alert("Sorry, something went wrong. Please call 832-353-8614 or email info@motortowncars.com.");
+    } finally {
+      btn.textContent = oldText;
+      btn.disabled = false;
+    }
+  });
 </script>
+
 </body>
 </html>
