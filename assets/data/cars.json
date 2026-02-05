@@ -152,6 +152,28 @@
     "Engine": "",
     "Stock Number": "521791"
   }
+},
+  {
+  "id": 8,
+  "title": "2021 Volkswagen Atlas",
+  "miles": 79800,
+  "price": 25000,
+  "tag": "clean",
+  "transmission": "Automatic",
+  "image": "",
+  "status": "available",
+  "details": {
+    "Year": "2021",
+    "Make": "Volkswagen",
+    "Model": "Atlas",
+    "Body Style": "SUV",
+    "Exterior Color": "",
+    "Drivetrain": "",
+    "Fuel Type": "Gasoline",
+    "Engine": "",
+    "Stock Number": "MC555146"
+  }
 }
+
 
 ]
