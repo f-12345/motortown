@@ -131,5 +131,27 @@
       "Seating": "5 Passengers",
       "Stock Number": "MT-1006"
     }
+  },
+{
+  "id": 7,
+  "title": "2023 Volkswagen Atlas",
+  "miles": null,
+  "price": null,
+  "tag": "",
+  "transmission": "",
+  "image": "",
+  "status": "available",
+  "details": {
+    "Year": "2023",
+    "Make": "Volkswagen",
+    "Model": "Unknown",
+    "Body Style": "Unknown",
+    "Exterior Color": "",
+    "Drivetrain": "",
+    "Fuel Type": "",
+    "Engine": "",
+    "Stock Number": "521791"
   }
+}
+
 ]
