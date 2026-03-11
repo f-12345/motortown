@@ -10,13 +10,13 @@
     "status": "available",
     "details": {
       "Year": "2020",
-      "Make": "Toyota",
-      "Model": "Camry SE",
-      "Body Style": "Sedan",
-      "Exterior Color": "Black",
-      "Drivetrain": "Front-Wheel Drive",
+      "Make": "McLaren",
+      "Model": "720",
+      "Body Style": "Coupe",
+      "Exterior Color": "White",
+      "Drivetrain": "four-Wheel Drive",
       "Fuel Type": "Gasoline",
-      "Engine": "2.5L 4-Cylinder",
+      "Engine": "6.5L 12-Cylinder",
       "Stock Number": "MT-1001"
     }
   },
@@ -32,13 +32,13 @@
     "status": "available",
     "details": {
       "Year": "2022",
-      "Make": "Honda",
-      "Model": "Civic Touring",
+      "Make": "Porsche",
+      "Model": "Panamera",
       "Body Style": "Sedan",
       "Exterior Color": "White",
-      "Drivetrain": "Front-Wheel Drive",
+      "Drivetrain": "All-Wheel Drive",
       "Fuel Type": "Gasoline",
-      "Engine": "1.5L Turbo",
+      "Engine": "4.0L Turbo",
       "Stock Number": "MT-1002"
     }
   },
