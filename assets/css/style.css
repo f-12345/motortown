@@ -382,3 +382,190 @@ textarea{ min-height: 110px; resize: vertical; }
   /* Mobile logo size so it stays clean */
   .brand-logo{ height: 50px; }
 }
+
+/* ===== Range input ===== */
+input[type="range"]{
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,.14);
+  border-radius: 3px;
+  outline: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+}
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.88);
+  cursor: pointer;
+  border: none;
+}
+input[type="range"]::-moz-range-thumb{
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.88);
+  cursor: pointer;
+  border: none;
+}
+
+/* ===== Inventory photo wrap ===== */
+.inv-img-wrap{
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.inv-img-wrap .inv-img{
+  transition: transform .35s ease;
+  display: block;
+}
+.inv-img-wrap:hover .inv-img{
+  transform: scale(1.05);
+}
+.img-hover-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .2s ease;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.inv-img-wrap:hover .img-hover-overlay{
+  opacity: 1;
+}
+.photo-count-badge{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0,0,0,.72);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+/* ===== VIN small text ===== */
+.inv-vin{
+  font-size: 11px;
+  letter-spacing: .04em;
+  word-break: break-all;
+}
+
+/* ===== Lightbox ===== */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .22s ease;
+}
+.lightbox.open{
+  opacity: 1;
+  pointer-events: all;
+}
+.lb-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.94);
+  backdrop-filter: blur(18px);
+}
+.lb-content{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: min(92vw, 1020px);
+  width: 100%;
+  padding: 0 70px;
+}
+.lb-img{
+  max-width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.6);
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.lb-title{
+  color: rgba(255,255,255,.92);
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+.lb-counter{
+  color: rgba(255,255,255,.55);
+  font-size: 13px;
+  min-height: 18px;
+  text-align: center;
+}
+.lb-close{
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  z-index: 2;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.22);
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .15s ease;
+}
+.lb-close:hover{ background: rgba(255,255,255,.22); }
+.lb-nav{
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.22);
+  color: #fff;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .15s ease;
+}
+.lb-nav:hover{ background: rgba(255,255,255,.22); }
+.lb-prev{ left: 16px; }
+.lb-next{ right: 16px; }
+
+@media (max-width: 600px){
+  .lb-content{ padding: 0 52px; }
+  .lb-nav{ width: 40px; height: 40px; font-size: 24px; }
+  .lb-prev{ left: 8px; }
+  .lb-next{ right: 8px; }
+}
