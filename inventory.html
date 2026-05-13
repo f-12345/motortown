@@ -21,7 +21,7 @@
     <button class="hamburger" aria-label="Open menu" aria-expanded="false" type="button">Menu</button>
 
     <nav class="nav" aria-label="Primary">
-      <a class="nav-link" href="inventory.html">Inventory</a>
+      <a class="nav-link active" href="inventory.html">Inventory</a>
 
       <div class="nav-item has-dd">
         <a class="nav-link" href="#" data-dd="true">Financing <span class="chev">▼</span></a>
@@ -53,19 +53,20 @@
 </header>
 
 <main>
+
   <section class="hero">
     <div class="container">
       <div class="tile">
-        <img class="tile-img" style="height:320px"
-             src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2200&q=60"
-             alt="Inventory">
+        <img class="tile-img" style="height:260px; object-position:center 35%;"
+             src="assets/images/lamborghini-urus-2019.jpg"
+             alt="Motor Town Inc Inventory">
         <div class="tile-body">
           <div class="kicker">Inventory</div>
-          <h2 style="margin:8px 0 6px;">Browse available vehicles</h2>
-          <p>Example listing grid. Replace with your real vehicles anytime.</p>
+          <h2 style="margin:8px 0 6px;">Browse our vehicles</h2>
+          <p>Quality pre-owned vehicles available in Houston, TX. Click any photo to see all pictures.</p>
           <div class="btn-row">
             <a class="btn primary" href="get-prequalified.html">Get Pre-Qualified</a>
-            <a class="btn" href="trade-sell.html">Trade/Sell Your Car</a>
+            <a class="btn" href="trade-sell.html">Trade / Sell Your Car</a>
           </div>
         </div>
       </div>
@@ -74,36 +75,48 @@
 
   <section class="section">
     <div class="container">
-      <div class="card" style="margin-bottom:14px;">
-        <div class="kicker">Quick Filters</div>
-        <div class="split" style="margin-top:10px;">
+
+      <div class="card" style="margin-bottom:16px;">
+        <div class="kicker">Filter Inventory</div>
+        <div class="split" style="margin-top:12px;">
           <div class="field">
             <label>Search</label>
-            <input id="q" placeholder="Try: Camry, Civic, Ford..." />
+            <input id="q" placeholder="Make, model, color, tag..." />
           </div>
           <div class="field">
-            <label>Price</label>
-            <select id="price">
-              <option value="all">Any</option>
-              <option value="0-20000">Under $20,000</option>
-              <option value="20000-30000">$20,000 - $30,000</option>
-              <option value="30000-999999">$30,000+</option>
-            </select>
+            <label>Max Price: <strong id="maxLabel">$200,000</strong></label>
+            <input type="range" id="maxPrice" min="0" max="200000" value="200000" step="1000" />
           </div>
+        </div>
+        <div style="margin-top:12px;">
+          <button id="clearFilters" class="btn">Clear Filters</button>
         </div>
       </div>
 
-      <div id="grid" class="inv-grid">
-        <!-- cards injected by inventory.js if you want, but also works static -->
-      </div>
+      <div id="invGrid" class="inv-grid"></div>
 
-      <div class="btn-row" style="margin-top:14px;">
+      <div class="btn-row" style="margin-top:16px;">
         <a class="btn primary" href="contact.html">Ask About a Vehicle</a>
         <a class="btn" href="get-prequalified.html">Get Pre-Qualified</a>
       </div>
+
     </div>
   </section>
+
 </main>
+
+<!-- Photo Lightbox -->
+<div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+  <div id="lbOverlay" class="lb-overlay"></div>
+  <button id="lbClose" class="lb-close" aria-label="Close">&times;</button>
+  <button id="lbPrev" class="lb-nav lb-prev" aria-label="Previous photo">&#8249;</button>
+  <button id="lbNext" class="lb-nav lb-next" aria-label="Next photo">&#8250;</button>
+  <div class="lb-content">
+    <div id="lbTitle" class="lb-title"></div>
+    <img id="lbImg" class="lb-img" src="" alt="">
+    <div id="lbCounter" class="lb-counter"></div>
+  </div>
+</div>
 
 <footer class="footer">
   <div class="container">
@@ -121,123 +134,8 @@
 </footer>
 
 <script src="assets/js/nav.js"></script>
-
-<!-- Optional: inventory grid script (works even if file exists already) -->
-<script>
-  const grid = document.getElementById("grid");
-  const q = document.getElementById("q");
-  const price = document.getElementById("price");
-
-  let cars = [];
-
-  function inPriceRange(p, range) {
-    if (range === "all") return true;
-    const [a, b] = range.split("-").map(Number);
-    return p >= a && p <= b;
-  }
-
-  function formatMiles(m) {
-    const n = Number(m || 0);
-    return n.toLocaleString();
-  }
-
-  function safeText(v) {
-    return String(v ?? "").trim();
-  }
-
-  function detailRow(label, value) {
-    const v = safeText(value);
-    if (!v) return "";
-    return `<div class="inv-line"><span class="inv-k">${label}:</span> <span class="inv-v">${v}</span></div>`;
-  }
-
-  function renderDetails(c) {
-    // Preferred: a flexible details object (any keys allowed)
-    if (c.details && typeof c.details === "object") {
-      const entries = Object.entries(c.details);
-      if (entries.length === 0) return "";
-
-      return `
-        <div class="inv-details" style="margin-top:10px;">
-          ${entries.map(([k, v]) => detailRow(k, v)).join("")}
-        </div>
-      `;
-    }
-
-    // Fallback: if someone adds random top-level fields, we can still show some
-    // (Optional safety, can remove if you want stricter)
-    const allowList = ["year", "make", "model", "trim", "color", "vin", "stock", "drivetrain", "fuel", "engine", "mpg"];
-    const rows = allowList
-      .filter(k => c[k] !== undefined && c[k] !== null && String(c[k]).trim() !== "")
-      .map(k => detailRow(k.charAt(0).toUpperCase() + k.slice(1), c[k]));
-
-    if (rows.length === 0) return "";
-    return `<div class="inv-details" style="margin-top:10px;">${rows.join("")}</div>`;
-  }
-
-  function carCard(c) {
-    return `
-      <div class="inv-card">
-        <img class="inv-img" src="${c.image}" alt="${safeText(c.title)}"
-             onerror="this.src='images/cars/placeholder.jpg'">
-        <div class="inv-body">
-          <h3 class="inv-title">${safeText(c.title)}</h3>
-          <div class="inv-meta">${formatMiles(c.miles)} miles • ${safeText(c.transmission) || "Automatic"}</div>
-
-          <div class="inv-price">
-            <div style="font-weight:800; font-size:18px;">$${Number(c.price || 0).toLocaleString()}</div>
-            ${c.tag ? `<div class="badge">${safeText(c.tag)}</div>` : ""}
-          </div>
-
-          ${renderDetails(c)}
-
-          <div class="btn-row" style="margin-top:10px;">
-            <a class="btn primary" href="contact.html">Check Availability</a>
-            <a class="btn" href="get-prequalified.html">Get Pre-Qualified</a>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
-  function render() {
-    const term = (q.value || "").toLowerCase();
-    const range = price.value;
-
-    const visibleCars = cars.filter(c => (c.status || "available").toLowerCase() === "available");
-
-    const filtered = visibleCars.filter(c => {
-      const title = (c.title || "").toLowerCase();
-      const p = Number(c.price || 0);
-      return title.includes(term) && inPriceRange(p, range);
-    });
-
-    if (filtered.length === 0) {
-      grid.innerHTML = `<div class="card"><h3>No matches found</h3><p>Try adjusting your search or filters.</p></div>`;
-      return;
-    }
-
-    grid.innerHTML = filtered.map(carCard).join("");
-  }
-
-  async function loadCars() {
-    const res = await fetch("assets/data/cars.json", { cache: "no-store" });
-    if (!res.ok) throw new Error("cars.json failed");
-    cars = await res.json();
-
-    q.addEventListener("input", render);
-    price.addEventListener("change", render);
-
-    render();
-  }
-
-  loadCars().catch(() => {
-    grid.innerHTML = `<div class="card"><h3>Inventory unavailable</h3><p>Please try again later.</p></div>`;
-  });
-
-  document.getElementById("y").textContent = new Date().getFullYear();
-</script>
-
+<script src="assets/js/inventory.js"></script>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 
 </body>
 </html>
