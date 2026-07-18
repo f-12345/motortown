@@ -84,7 +84,7 @@ const cars = [
     title: "2021 Nissan Versa SV",
     miles: "43,855",
     trans: "CVT",
-    price: null,
+    price: 8990,
     tag: "Sedan",
     img: "assets/images/new_cars_2/WhatsApp Image 2026-06-22 at 6.30.08 AM.jpeg",
     photos: [
@@ -112,7 +112,7 @@ const cars = [
     title: "2021 Honda Accord EX-L",
     miles: "82,665",
     trans: "CVT",
-    price: null,
+    price: 19990,
     tag: "Sedan",
     img: "assets/images/new_cars_2/WhatsApp Image 2026-06-29 at 1.07.55 PM.jpeg",
     photos: [
