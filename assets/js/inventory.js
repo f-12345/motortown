@@ -112,7 +112,7 @@ const cars = [
     title: "2021 Honda Accord EX-L",
     miles: "82,665",
     trans: "CVT",
-    price: 19990,
+    price: 18990,
     tag: "Sedan",
     img: "assets/images/new_cars_2/WhatsApp Image 2026-06-29 at 1.07.55 PM.jpeg",
     photos: [
@@ -139,7 +139,7 @@ const cars = [
     title: "2018 Porsche Cayenne Platinum Edition",
     miles: "59,758",
     trans: "8-Speed Automatic",
-    price: 19990,
+    price: 18990,
     tag: "SUV",
     img: "assets/images/new_cars_3/WhatsApp Image 2026-07-06 at 5.00.36 PM.jpeg",
     photos: [
