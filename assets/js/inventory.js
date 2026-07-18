@@ -446,7 +446,7 @@ const cars = [
     title: "2019 Nissan Sentra",
     miles: "114,490",
     trans: "Automatic",
-    price: null,
+    price: 6990,
     tag: "Sedan",
     img: "assets/images/nissan-sentra-2019-02.jpg",
     photos: [
