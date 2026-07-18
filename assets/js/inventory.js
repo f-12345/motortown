@@ -139,7 +139,7 @@ const cars = [
     title: "2018 Porsche Cayenne Platinum Edition",
     miles: "59,758",
     trans: "8-Speed Automatic",
-    price: null,
+    price: 19990,
     tag: "SUV",
     img: "assets/images/new_cars_3/WhatsApp Image 2026-07-06 at 5.00.36 PM.jpeg",
     photos: [
