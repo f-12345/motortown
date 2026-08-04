@@ -166,7 +166,7 @@ const cars = [
     title: "2016 Mercedes-Benz E400 Cabriolet",
     miles: "91,223",
     trans: "7-Speed Automatic",
-    price: null,
+    price: 11990,
     tag: "Convertible",
     img: "assets/images/new_cars_4/WhatsApp Image 2026-08-03 at 4.22.31 PM.jpeg",
     photos: [
@@ -194,7 +194,7 @@ const cars = [
     title: "2020 Honda Accord LX",
     miles: "90,163",
     trans: "CVT",
-    price: null,
+    price: 16990,
     tag: "Sedan",
     img: "assets/images/new_cars_4/WhatsApp Image 2026-08-03 at 4.23.23 PM (1).jpeg",
     photos: [
